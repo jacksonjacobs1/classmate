@@ -5,21 +5,21 @@ class Navbar extends Component {
    render() {
       return (
          <div>
-            <Nav justify variant="tabs" defaultActiveKey="/home">
+            <Nav variant="tabs" defaultActiveKey="/home">
                <Nav.Item>
-                  <Nav.Link>Home</Nav.Link>
+                  <Nav.Link href="/home">Home</Nav.Link>
                </Nav.Item>
 
                <Nav.Item>
-                  <Nav.Link>Blog</Nav.Link>
+                  <Nav.Link eventKey="link-1">Blog</Nav.Link>
                </Nav.Item>
 
                <Nav.Item>
-                  <Nav.Link>Assignments</Nav.Link>
+                  <Nav.Link eventKey="link-2">Assignments</Nav.Link>
                </Nav.Item>
 
                <Nav.Item>
-                  <Nav.Link>Info</Nav.Link>
+                  <Nav.Link eventKey="link-3">Info</Nav.Link>
                </Nav.Item>
             </Nav>
          </div>
@@ -27,4 +27,4 @@ class Navbar extends Component {
    }
 }
 
-export default navbar;
+export default Navbar;
