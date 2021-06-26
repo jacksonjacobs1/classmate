@@ -1,16 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
+
+
 //Routing stuff
-import React, {Suspense, lazy} from 'react';
+import React, {Suspense, lazy, useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+//importing components
 const Home = lazy(() => import('./components/home.js'));
 const Information = lazy(() => import('./components/information.js'));
-
+import Login from './components/login';
 
 
 function App() {
+   const [token, setToken] = useState();
+
+   if(!token){
+      return <Login setToken={setToken}/>
+   }
+
    return (
       <div className="App">
          <Navbar/>
