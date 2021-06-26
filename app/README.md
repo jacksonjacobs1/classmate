@@ -1,3 +1,14 @@
+# Clone instructions:
+
+After cloning the repository, run
+
+$cd app
+$npm install
+
+If you need to use react-router-dom and are getting an error, run
+
+$npm install react-router-dom
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

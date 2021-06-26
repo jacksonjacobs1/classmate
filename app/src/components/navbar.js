@@ -7,7 +7,7 @@ class Navbar extends Component {
          <div>
             <Nav variant="tabs" defaultActiveKey="/home">
                <Nav.Item>
-                  <Nav.Link href="/home">Home</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
                </Nav.Item>
 
                <Nav.Item>
@@ -19,7 +19,7 @@ class Navbar extends Component {
                </Nav.Item>
 
                <Nav.Item>
-                  <Nav.Link eventKey="link-3">Info</Nav.Link>
+                  <Nav.Link href="/info">Info</Nav.Link>
                </Nav.Item>
             </Nav>
          </div>
