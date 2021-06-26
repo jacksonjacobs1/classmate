@@ -7,16 +7,18 @@ import Navbar from './components/navbar';
 import React, {Suspense, lazy, useState} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import Login from './components/login';
+
 //importing components
 const Home = lazy(() => import('./components/home.js'));
 const Information = lazy(() => import('./components/information.js'));
-import Login from './components/login';
+
 
 
 function App() {
    const [token, setToken] = useState();
 
-   if(!token){
+   if(!token){                            //checks whether useState has 
       return <Login setToken={setToken}/>
    }
 
