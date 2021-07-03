@@ -1,14 +1,14 @@
 # Clone instructions:
 
 After cloning the repository, run
-`cd app`
-`npm install`
+### `cd app`
+### `npm install`
 
 If you need to use react-router-dom and are getting an error, run
-`npm install react-router-dom`
+### `npm install react-router-dom`
 
 If you are having server-related package manager issues, try running
-`npm install --save-dev express cors`
+### `npm install --save-dev express cors`
 
 # Getting Started with Create React App
 
@@ -17,7 +17,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `npm run dev`
+Which runs npm start and node server.js at the same time using concurrently
 ### `npm start`
 
 Runs the app in the development mode.\
