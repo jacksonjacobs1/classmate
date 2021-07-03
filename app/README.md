@@ -1,13 +1,14 @@
 # Clone instructions:
 
 After cloning the repository, run
-
-$cd app
-$npm install
+`cd app`
+`npm install`
 
 If you need to use react-router-dom and are getting an error, run
+`npm install react-router-dom`
 
-$npm install react-router-dom
+If you are having server-related package manager issues, try running
+`npm install --save-dev express cors`
 
 # Getting Started with Create React App
 
