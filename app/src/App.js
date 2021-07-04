@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
+import useToken from './useToken.js'
 
 
 //Routing stuff
-import React, {Suspense, lazy, useState} from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './components/login';
@@ -13,23 +14,21 @@ import Login from './components/login';
 const Home = lazy(() => import('./components/home.js'));
 const Information = lazy(() => import('./components/information.js'));
 
-
-
 function App() {
-   const [token, setToken] = useState();
+   const {token, setToken} = useToken();
 
-   if(!token){                            //checks whether useState has 
-      return <Login setToken={setToken}/>
+   if (!token) {
+      return <Login setToken={setToken} />
    }
 
    return (
       <div className="App">
-         <Navbar/>
+         <Navbar />
          <Router>
             <Suspense fallback={<div>Loading...</div>}>
                <Switch>
-                  <Route exact path="/" component={Home}/>
-                  <Route path="/info" component={Information}/>
+                  <Route exact path="/" component={Home} />
+                  <Route path="/info" component={Information} />
                </Switch>
             </Suspense>
          </Router>
